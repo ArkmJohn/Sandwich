@@ -50,15 +50,6 @@ namespace ZM.JM.SubSystem
 
         public virtual void OnCollisionEnter(Collision other)
         {
-            //if (other.gameObject.GetComponent<Ingredient>() != null && gameObject.GetComponent<Ingredient>().currentState == IngredientState.INUSE && currentSub != null)
-            //{
-            //    Ingredient ing = other.gameObject.GetComponent<Ingredient>();
-            //    ing.AddToSub(other.gameObject.GetComponent<Ingredient>().currentSub);
-            //    currentSub.AddIng(ing.type.ToString(), other.gameObject);
-            //    ing.gameObject.transform.SetParent(currentSub.transform);
-            //    //SubCreationManager.instance.AddIngredient(ing.type.ToString(), other.gameObject); // Adds the current gameObject to the sub
-
-            //}   
 
             // 1 if the other is the sub
             if (other.gameObject.GetComponent<Sub>() != null)
@@ -76,9 +67,9 @@ namespace ZM.JM.SubSystem
                         //// Add this to sub
                         this.AddToTheSub(tempIng.currentSub);
                         //// Make the Last object Kinemtatic
-                        //tempIng.kinSwitch(true);
+                        tempIng.kinSwitch(true);
                         //// RemoveThrowing Abilities
-                        //tempIng.RemoveThrow();
+                         tempIng.RemoveThrow();
                     }
                     else
                     {
@@ -147,9 +138,9 @@ namespace ZM.JM.SubSystem
 
         public void kinSwitch(bool state)
         {
-            if (this.GetComponent<Rigidbody>() != null)
+            if (GetComponent<Rigidbody>() != null)
             {
-                this.GetComponent<Rigidbody>().isKinematic = state;
+                GetComponent<Rigidbody>().isKinematic = state;
             }
         }
     }

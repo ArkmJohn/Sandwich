@@ -161,7 +161,7 @@ namespace ZM.JM.SubSystem
                 case "meat":
                     AddMeat(ingredient);
                     break;
-
+    
                 case "cheese":
                     AddCheese(ingredient);
                     break;
@@ -219,7 +219,8 @@ namespace ZM.JM.SubSystem
             Destroy(topBread.GetComponent<BoxCollider>());
 
             gameObject.AddComponent<Rigidbody>(); 
-            gameObject.AddComponent<Throwable>(); 
+            gameObject.AddComponent<Throwable>();
+            Destroy(this.GetComponent<Sub>());
         }
 
         private void OnDrawGizmos()
