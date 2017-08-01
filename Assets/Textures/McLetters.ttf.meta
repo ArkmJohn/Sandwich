@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ad8010a45d9f47f4b8b8dab8df6e0489
+timeCreated: 1501409092
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: McLetters
+  fontNames:
+  - McLetters
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

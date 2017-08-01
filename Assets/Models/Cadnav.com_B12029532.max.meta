@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: 94d371547c4bfe24baf223cde9bcdd67
+timeCreated: 1501055620
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Model_060_Cured_Meats_00
+    100004: Model_060_Cured_Meats_01
+    100006: Model_060_Cured_Meats_02
+    100008: Model_060_Cured_Meats_03
+    100010: Model_060_Cured_Meats_04
+    100012: Model_060_Cured_Meats_05
+    100014: Model_060_Cured_Meats_06
+    100016: Model_060_Cured_Meats_07
+    100018: Model_060_Cured_Meats_08
+    100020: Model_060_Cured_Meats_09
+    100022: Model_060_Cured_Meats_10
+    100024: Model_060_Cured_Meats_11
+    100026: Model_060_Cured_Meats_12
+    100028: Model_060_Cured_Meats_13
+    100030: Model_060_Cured_Meats_14
+    100032: Model_060_Cured_Meats_15
+    100034: Model_060_Cured_Meats_16
+    100036: Model_060_Cured_Meats_17
+    100038: Model_060_Cured_Meats_18
+    100040: Model_060_Cured_Meats_19
+    100042: Model_060_Cured_Meats_20
+    100044: Model_060_Cured_Meats_21
+    100046: Model_060_Cured_Meats_22
+    100048: Model_060_Cured_Meats_23
+    100050: Model_060_Cured_Meats_24
+    100052: Model_060_Cured_Meats_25
+    100054: Model_060_Cured_Meats_26
+    100056: Model_060_Cured_Meats_27
+    100058: Model_060_Cured_Meats_28
+    100060: Model_060_Cured_Meats_29
+    100062: Model_060_Cured_Meats_30
+    400000: //RootNode
+    400002: Model_060_Cured_Meats_00
+    400004: Model_060_Cured_Meats_01
+    400006: Model_060_Cured_Meats_02
+    400008: Model_060_Cured_Meats_03
+    400010: Model_060_Cured_Meats_04
+    400012: Model_060_Cured_Meats_05
+    400014: Model_060_Cured_Meats_06
+    400016: Model_060_Cured_Meats_07
+    400018: Model_060_Cured_Meats_08
+    400020: Model_060_Cured_Meats_09
+    400022: Model_060_Cured_Meats_10
+    400024: Model_060_Cured_Meats_11
+    400026: Model_060_Cured_Meats_12
+    400028: Model_060_Cured_Meats_13
+    400030: Model_060_Cured_Meats_14
+    400032: Model_060_Cured_Meats_15
+    400034: Model_060_Cured_Meats_16
+    400036: Model_060_Cured_Meats_17
+    400038: Model_060_Cured_Meats_18
+    400040: Model_060_Cured_Meats_19
+    400042: Model_060_Cured_Meats_20
+    400044: Model_060_Cured_Meats_21
+    400046: Model_060_Cured_Meats_22
+    400048: Model_060_Cured_Meats_23
+    400050: Model_060_Cured_Meats_24
+    400052: Model_060_Cured_Meats_25
+    400054: Model_060_Cured_Meats_26
+    400056: Model_060_Cured_Meats_27
+    400058: Model_060_Cured_Meats_28
+    400060: Model_060_Cured_Meats_29
+    400062: Model_060_Cured_Meats_30
+    2300000: Model_060_Cured_Meats_00
+    2300002: Model_060_Cured_Meats_01
+    2300004: Model_060_Cured_Meats_02
+    2300006: Model_060_Cured_Meats_03
+    2300008: Model_060_Cured_Meats_04
+    2300010: Model_060_Cured_Meats_05
+    2300012: Model_060_Cured_Meats_06
+    2300014: Model_060_Cured_Meats_07
+    2300016: Model_060_Cured_Meats_08
+    2300018: Model_060_Cured_Meats_09
+    2300020: Model_060_Cured_Meats_10
+    2300022: Model_060_Cured_Meats_11
+    2300024: Model_060_Cured_Meats_12
+    2300026: Model_060_Cured_Meats_13
+    2300028: Model_060_Cured_Meats_14
+    2300030: Model_060_Cured_Meats_15
+    2300032: Model_060_Cured_Meats_16
+    2300034: Model_060_Cured_Meats_17
+    2300036: Model_060_Cured_Meats_18
+    2300038: Model_060_Cured_Meats_19
+    2300040: Model_060_Cured_Meats_20
+    2300042: Model_060_Cured_Meats_21
+    2300044: Model_060_Cured_Meats_22
+    2300046: Model_060_Cured_Meats_23
+    2300048: Model_060_Cured_Meats_24
+    2300050: Model_060_Cured_Meats_25
+    2300052: Model_060_Cured_Meats_26
+    2300054: Model_060_Cured_Meats_27
+    2300056: Model_060_Cured_Meats_28
+    2300058: Model_060_Cured_Meats_29
+    2300060: Model_060_Cured_Meats_30
+    3300000: Model_060_Cured_Meats_00
+    3300002: Model_060_Cured_Meats_01
+    3300004: Model_060_Cured_Meats_02
+    3300006: Model_060_Cured_Meats_03
+    3300008: Model_060_Cured_Meats_04
+    3300010: Model_060_Cured_Meats_05
+    3300012: Model_060_Cured_Meats_06
+    3300014: Model_060_Cured_Meats_07
+    3300016: Model_060_Cured_Meats_08
+    3300018: Model_060_Cured_Meats_09
+    3300020: Model_060_Cured_Meats_10
+    3300022: Model_060_Cured_Meats_11
+    3300024: Model_060_Cured_Meats_12
+    3300026: Model_060_Cured_Meats_13
+    3300028: Model_060_Cured_Meats_14
+    3300030: Model_060_Cured_Meats_15
+    3300032: Model_060_Cured_Meats_16
+    3300034: Model_060_Cured_Meats_17
+    3300036: Model_060_Cured_Meats_18
+    3300038: Model_060_Cured_Meats_19
+    3300040: Model_060_Cured_Meats_20
+    3300042: Model_060_Cured_Meats_21
+    3300044: Model_060_Cured_Meats_22
+    3300046: Model_060_Cured_Meats_23
+    3300048: Model_060_Cured_Meats_24
+    3300050: Model_060_Cured_Meats_25
+    3300052: Model_060_Cured_Meats_26
+    3300054: Model_060_Cured_Meats_27
+    3300056: Model_060_Cured_Meats_28
+    3300058: Model_060_Cured_Meats_29
+    3300060: Model_060_Cured_Meats_30
+    4300000: Model_060_Cured_Meats_00
+    4300002: Model_060_Cured_Meats_01
+    4300004: Model_060_Cured_Meats_02
+    4300006: Model_060_Cured_Meats_03
+    4300008: Model_060_Cured_Meats_04
+    4300010: Model_060_Cured_Meats_05
+    4300012: Model_060_Cured_Meats_06
+    4300014: Model_060_Cured_Meats_07
+    4300016: Model_060_Cured_Meats_08
+    4300018: Model_060_Cured_Meats_09
+    4300020: Model_060_Cured_Meats_10
+    4300022: Model_060_Cured_Meats_11
+    4300024: Model_060_Cured_Meats_12
+    4300026: Model_060_Cured_Meats_13
+    4300028: Model_060_Cured_Meats_14
+    4300030: Model_060_Cured_Meats_15
+    4300032: Model_060_Cured_Meats_16
+    4300034: Model_060_Cured_Meats_17
+    4300036: Model_060_Cured_Meats_18
+    4300038: Model_060_Cured_Meats_19
+    4300040: Model_060_Cured_Meats_20
+    4300042: Model_060_Cured_Meats_21
+    4300044: Model_060_Cured_Meats_22
+    4300046: Model_060_Cured_Meats_23
+    4300048: Model_060_Cured_Meats_24
+    4300050: Model_060_Cured_Meats_25
+    4300052: Model_060_Cured_Meats_26
+    4300054: Model_060_Cured_Meats_27
+    4300056: Model_060_Cured_Meats_28
+    4300058: Model_060_Cured_Meats_29
+    4300060: Model_060_Cured_Meats_30
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
