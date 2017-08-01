@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Valve.VR.InteractionSystem;
+ 
 namespace ZM.JM.SubSystem
 {
     public class Sub : MonoBehaviour
@@ -56,7 +57,7 @@ namespace ZM.JM.SubSystem
         public void SetBread(GameObject newBread)
         {
 
-
+             
             if (newBread.GetComponent<Bread>() == null)
             {
                 //Debug.LogError("This is not bread");
@@ -72,17 +73,19 @@ namespace ZM.JM.SubSystem
                     //PlaceFinalBread(newBread);
                     if (topBread != null)
                     {
-                        if (isBotBread(newBread.GetComponent<Sub>()))
-                        {
-                            //Destroy(newBread.GetComponent<Sub>());
-                            topBread = newBread;
-                            topBread.GetComponent<Ingredient>().kinSwitch(true);
-                            //PlaceFinalBread(newBread);
-                        }
+                        //if (isBotBread(newBread.GetComponent<Sub>()))
+                        //{
+
+                        //    //PlaceFinalBread(newBread);
+                        //}
                     }
                     else
                     {
-
+                        Debug.Log("Burger has been made");
+                        //Destroy(newBread.GetComponent<Sub>());
+                        topBread = newBread;
+                        topBread.GetComponent<Ingredient>().kinSwitch(true);
+                        MakeCollider();
                     }
                 }
                 else
@@ -116,6 +119,7 @@ namespace ZM.JM.SubSystem
             final = new Vector3(bread.transform.position.x, Mathf.Abs(midPoint.y + inc + 0.1f), bread.transform.position.z);
             Debug.Log(final);
             newBread.transform.position = final;
+            MakeCollider();
 
         }
 
@@ -134,6 +138,12 @@ namespace ZM.JM.SubSystem
 
         public void AddIng(string ingType, GameObject ingredient)
         {
+            Debug.Log("Adding " + ingType);
+            if (ingredientTransform.Contains(ingredient))
+            {
+                return;
+            }
+
             switch (ingType.Trim().ToLower())
             {
                 case "bread":
@@ -156,6 +166,51 @@ namespace ZM.JM.SubSystem
                     AddCheese(ingredient);
                     break;
             }
+        }
+
+        public Bounds MakeBounds()
+        {
+            List<BoxCollider> colliders = new List<BoxCollider>();
+            foreach (GameObject a in ingredientTransform)
+            {
+                colliders.Add(a.GetComponent<BoxCollider>());
+            }
+
+            Bounds bounds = new Bounds(this.transform.position, Vector3.zero);
+            bounds.Encapsulate(this.GetComponent<BoxCollider>().bounds);
+            foreach(BoxCollider a in colliders)
+            {
+                bounds.Encapsulate(a.bounds);
+            }
+            if (topBread != null)
+            {
+                bounds.Encapsulate(topBread.GetComponent<BoxCollider>().bounds);
+            }
+            return bounds;
+        }
+
+        public void MakeCollider()
+        {
+            gameObject.AddComponent<BoxCollider>(); 
+
+            BoxCollider myBoxCollider = GetComponent<BoxCollider>();
+
+            myBoxCollider.size = MakeBounds().size;
+        }
+
+        public void MakeSandwich()
+        {
+            foreach(GameObject a in ingredientTransform)
+            {
+                Destroy(a.GetComponent<Throwable>());
+                Destroy(a.GetComponent<Ingredient>());
+
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireCube(MakeBounds().center, MakeBounds().size);   
         }
     }
 
