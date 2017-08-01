@@ -191,11 +191,13 @@ namespace ZM.JM.SubSystem
 
         public void MakeCollider()
         {
+            Destroy(gameObject.GetComponent<BoxCollider>());
             gameObject.AddComponent<BoxCollider>(); 
 
             BoxCollider myBoxCollider = GetComponent<BoxCollider>();
 
             myBoxCollider.size = MakeBounds().size;
+            MakeSandwich();
         }
 
         public void MakeSandwich()
@@ -203,9 +205,21 @@ namespace ZM.JM.SubSystem
             foreach(GameObject a in ingredientTransform)
             {
                 Destroy(a.GetComponent<Throwable>());
+                a.GetComponent<Ingredient>().kinSwitch(true);
                 Destroy(a.GetComponent<Ingredient>());
+                Destroy(a.GetComponent<Rigidbody>());
+                Destroy(a.GetComponent<BoxCollider>());
 
+                 
             }
+            Destroy(topBread.GetComponent<Throwable>());
+            topBread.GetComponent<Ingredient>().kinSwitch(true);
+            Destroy(topBread.GetComponent<Ingredient>());
+            Destroy(topBread.GetComponent<Rigidbody>());
+            Destroy(topBread.GetComponent<BoxCollider>());
+
+            gameObject.AddComponent<Rigidbody>(); 
+            gameObject.AddComponent<Throwable>(); 
         }
 
         private void OnDrawGizmos()
