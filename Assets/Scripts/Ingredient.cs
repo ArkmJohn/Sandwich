@@ -96,7 +96,7 @@ namespace ZM.JM.SubSystem
                     // 2 if the other is part of the sub
                     if (tempIng.currentSub == this.currentSub)
                     {
-                        tempIng.MakeThrowable();
+                        //tempIng.MakeThrowable();
                         tempIng.kinSwitch(false);
                         this.RemoveSub();
                     }
@@ -127,7 +127,7 @@ namespace ZM.JM.SubSystem
 
         public void MakeThrowable()
         {
-            this.gameObject.AddComponent<Throwable>();
+            //this.gameObject.AddComponent<Throwable>();
         }
 
         public void RemoveThrow()
