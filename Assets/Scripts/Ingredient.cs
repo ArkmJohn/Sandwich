@@ -12,6 +12,9 @@ namespace ZM.JM.SubSystem
         public Sub currentSub;
         [SerializeField]
         private bool shouldDeleteCollider = true;
+        [SerializeField]
+        private Quaternion startRotation;
+        
 
         public IngredientState GetState()
         {
@@ -21,6 +24,11 @@ namespace ZM.JM.SubSystem
         public virtual void ChangeState(IngredientState newState)
         {
             this.currentState = newState;
+        }
+
+        private void Awake()
+        {
+            this.startRotation = this.transform.rotation;
         }
 
         public void HoldItem()
@@ -34,19 +42,6 @@ namespace ZM.JM.SubSystem
             //if (currentState != IngredientState.INUSE)
                 ChangeState(IngredientState.HASHELD);
         }
-
-        //public virtual void AddToSub(Sub sub)
-        //{
-        //    ChangeState(IngredientState.INUSE);
-
-        //    //GetComponent<Rigidbody>().isKinematic = true;
-        //    Destroy(GetComponent<Rigidbody>());
-        //    Destroy(gameObject.GetComponent<Valve.VR.InteractionSystem.Throwable>());
-        //    Destroy(gameObject.GetComponent<Collider>());
-
-
-
-        //}
 
         public virtual void OnCollisionEnter(Collision other)
         {
