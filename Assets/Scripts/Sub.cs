@@ -191,6 +191,7 @@ namespace ZM.JM.SubSystem
 
         public void MakeCollider()
         {
+            Debug.Log("Creating Collider for Sandwich");
             Destroy(gameObject.GetComponent<BoxCollider>());
             gameObject.AddComponent<BoxCollider>(); 
 
@@ -202,6 +203,7 @@ namespace ZM.JM.SubSystem
 
         public void MakeSandwich()
         {
+            Debug.Log("Forming Sandwich");
             foreach(GameObject a in ingredientTransform)
             {
                 Destroy(a.GetComponent<Throwable>());
@@ -218,7 +220,8 @@ namespace ZM.JM.SubSystem
             Destroy(topBread.GetComponent<Rigidbody>());
             Destroy(topBread.GetComponent<BoxCollider>());
 
-            gameObject.AddComponent<Rigidbody>(); 
+            Rigidbody rb = gameObject.AddComponent<Rigidbody>(); 
+            rb.isKinematic = true;
             gameObject.AddComponent<Throwable>();
             Destroy(this.GetComponent<Sub>());
         }

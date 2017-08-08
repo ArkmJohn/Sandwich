@@ -38,9 +38,10 @@ namespace ZM.JM.SubSystem
         }
 
         public void DetachItem()
-        { 
+        {
             //if (currentState != IngredientState.INUSE)
-                ChangeState(IngredientState.HASHELD);
+            ChangeState(IngredientState.HASHELD);
+            //GetComponent<Rigidbody>().isKinematic = true;
         }
 
         public virtual void OnCollisionEnter(Collision other)
@@ -56,7 +57,7 @@ namespace ZM.JM.SubSystem
                 if (other.gameObject.GetComponent<Ingredient>() != null)
                 {
                     Ingredient tempIng = other.gameObject.GetComponent<Ingredient>();
-                    // 2 if the other is part of the sub
+                    // 2 if the other is part of the sub    
                     if (tempIng.currentSub != null)
                     {
                         //// Add this to sub
@@ -64,7 +65,7 @@ namespace ZM.JM.SubSystem
                         //// Make the Last object Kinemtatic
                         tempIng.kinSwitch(true);
                         //// RemoveThrowing Abilities
-                         tempIng.RemoveThrow();
+                         //tempIng.RemoveThrow();
                     }
                     else
                     {
