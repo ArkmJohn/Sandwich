@@ -18,11 +18,6 @@ namespace ZM.JM.SubSystem
         public List<GameObject> veggies = new List<GameObject>();
         public List<GameObject> cheese = new List<GameObject>();
 
-        public void AddTransform(GameObject obj)
-        {
-            ingredientTransform.Add(obj);
-        }
-
         // For future Scalability
         #region AddIngredients
         public void AddMeat(GameObject obj)
@@ -192,10 +187,11 @@ namespace ZM.JM.SubSystem
         public void MakeCollider()
         {
             Debug.Log("Creating Collider for Sandwich");
-            Destroy(gameObject.GetComponent<BoxCollider>());
-            gameObject.AddComponent<BoxCollider>(); 
+            Destroy(this.GetComponent<BoxCollider>());
+            //Destroy(gameObject.GetComponent<Rigidbody>());
+            
 
-            BoxCollider myBoxCollider = GetComponent<BoxCollider>();
+            BoxCollider myBoxCollider = gameObject.AddComponent<BoxCollider>();
 
             myBoxCollider.size = MakeBounds().size;
             MakeSandwich();
@@ -223,7 +219,12 @@ namespace ZM.JM.SubSystem
             Rigidbody rb = gameObject.AddComponent<Rigidbody>(); 
             rb.isKinematic = true;
             gameObject.AddComponent<Throwable>();
-            Destroy(this.GetComponent<Sub>());
+            Destroy(this);
+        }
+
+        public void AddTransform(GameObject obj)
+        {
+            ingredientTransform.Add(obj);
         }
 
         private void OnDrawGizmos()

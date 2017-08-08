@@ -92,8 +92,6 @@ namespace ZM.JM.SubSystem
                     // 2 if the other is part of the sub
                     if (tempIng.currentSub == this.currentSub)
                     {
-                        //tempIng.MakeThrowable();
-                        tempIng.kinSwitch(false);
                         this.RemoveSub();
                     }
                     else
