@@ -87,6 +87,7 @@ namespace ZM.JM.SubSystem
                     {
                         Debug.Log("Burger has been made");
                         //Destroy(newBread.GetComponent<Sub>());
+                        //PlaceFinalBread(newBread);
                         topBread = newBread;
                         topBread.GetComponent<Ingredient>().kinSwitch(true);
                         MakeCollider();
@@ -124,7 +125,7 @@ namespace ZM.JM.SubSystem
             final = new Vector3(bread.transform.position.x, Mathf.Abs(midPoint.y + inc + 0.1f), bread.transform.position.z);
             Debug.Log(final);
             newBread.transform.position = final;
-            MakeCollider();
+            //MakeCollider();
 
         }
 
@@ -227,6 +228,8 @@ namespace ZM.JM.SubSystem
             Destroy(topBread.GetComponent<Ingredient>());
             Destroy(topBread.GetComponent<Rigidbody>());
             Destroy(topBread.GetComponent<BoxCollider>());
+
+            //PlaceFinalBread(topBread);
 
             Rigidbody rb = gameObject.AddComponent<Rigidbody>(); 
             rb.isKinematic = true;
