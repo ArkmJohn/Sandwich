@@ -18,6 +18,15 @@ namespace ZM.JM.SubSystem
         public List<GameObject> veggies = new List<GameObject>();
         public List<GameObject> cheese = new List<GameObject>();
 
+        public AudioSource aSource;
+        public AudioClip makeSandwichSound;
+
+        private void Awake()
+        {
+            aSource = this.gameObject.AddComponent<AudioSource>();
+            aSource.spatialBlend = 1;
+        }
+
         // For future Scalability
         #region AddIngredients
         public void AddMeat(GameObject obj)
@@ -110,6 +119,7 @@ namespace ZM.JM.SubSystem
         {
             Vector3 final = bread.transform.position;
             Vector3 midPoint = FindCenterPoint(ingredientTransform.ToArray());
+            newBread.transform.SetParent(this.gameObject.transform);
             float inc = midPoint.y - final.y;
             final = new Vector3(bread.transform.position.x, Mathf.Abs(midPoint.y + inc + 0.1f), bread.transform.position.z);
             Debug.Log(final);
@@ -165,6 +175,7 @@ namespace ZM.JM.SubSystem
 
         public Bounds MakeBounds()
         {
+
             List<BoxCollider> colliders = new List<BoxCollider>();
             foreach (GameObject a in ingredientTransform)
             {
@@ -187,6 +198,7 @@ namespace ZM.JM.SubSystem
         public void MakeCollider()
         {
             Debug.Log("Creating Collider for Sandwich");
+            aSource.PlayOneShot(makeSandwichSound);
             Destroy(this.GetComponent<BoxCollider>());
             //Destroy(gameObject.GetComponent<Rigidbody>());
             
@@ -199,7 +211,7 @@ namespace ZM.JM.SubSystem
 
         public void MakeSandwich()
         {
-            Debug.Log("Forming Sandwich");
+            Debug.Log("Forming Sandwich");   
             foreach(GameObject a in ingredientTransform)
             {
                 Destroy(a.GetComponent<Throwable>());

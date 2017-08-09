@@ -14,7 +14,9 @@ namespace ZM.JM.SubSystem
         private bool shouldDeleteCollider = true;
         [SerializeField]
         private Quaternion startRotation;
-        
+
+        public AudioClip pickupItemSound, dropItemSound;
+        public AudioSource aSource;
 
         public IngredientState GetState()
         {
@@ -29,11 +31,14 @@ namespace ZM.JM.SubSystem
         private void Awake()
         {
             this.startRotation = this.transform.rotation;
+            aSource = this.gameObject.AddComponent<AudioSource>();
+            aSource.spatialBlend = 1;
         }
 
         public void HoldItem()
         {
             //if(currentState != IngredientState.INUSE)
+            aSource.PlayOneShot(pickupItemSound, Random.Range(0.1f, 1));
                 ChangeState(IngredientState.ISHELD);
         }
 
